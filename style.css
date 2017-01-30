@@ -5,60 +5,68 @@ body {
 
 }
 
+@font-face {
+	font-family: riogrande;
+	src: url("fonts/rio_grande/riogrande.ttf");
+	font-weight: 
+}
+
 header {
 	/*display: block;*/
 }
 
 .flexcontainer {
 	display: flex;
+	flex: 0 1 auto;
 	flex-direction: row;
+	flex-wrap: ltr;
 	margin: 0 auto;
+	/*max-height: 90%;*/
 }
 
 main {
-	flex-grow: 1;
 /*	max-height: 600px;*/
 /*	width: 650px;*/
-	border: 10px solid green;
+	flex-grow: 1;
+	border: 10px solid beige;
+	align-content: left;
 }
 
 aside {
 	order: 1;
-/*	flex-wrap: wrap;*/
-	flex-direction: column;
-
-/*	justify-content: space-around;
-	align-content: space-around;
-*/
-/*	flex-wrap: ltr;*/
 	object-position: center;
 	max-width: 20%;
 	margin: 0 auto;
-	background-color: beige;
-/*	width: 200px;*/
-
-
 }
 
-
+.letterhidden {
+	display: inline-block;
+	margin: 10px;
+	height: 50px;
+	max-width: 100px;
+	min-width: 30px;
+	border-bottom: 3px solid black;
+	flex-wrap: nowrap;
+}
 
 .alphaButton {
 	height: 50px;
 	width: 50px;
-	background: beige;
-	color: black;
+	min-width: 15px;
+	background: BurlyWood;
+	color: white;
 	font-size: 2em;
 	margin: 10px;
-	padding: 10px;
 	border: 3px solid white;
 	border-radius: 40%;
 	text-align: center;
+
 
 }
 
 #head {
 	display: block;
-	font-family: 
+	font-family: riogrande;
 	background-color: beige;
 	color: white;
 	height: 75px;
@@ -70,11 +78,26 @@ aside {
 }
 
 #solution {
+	/*justify-content: flex-end;*/
+	fl
 	display: block;
 	height: 100px;
-	background: blue;
+	background: lightgrey;
 	text-align: left;
+	object-position: top;
 	margin: 0 auto;
+}
+
+#startBox {
+	width: 200px;
+	height: 150px;
+}
+
+.playButton {
+	width: 250px;
+	height: 150px;
+	border: 3px solid black;
+
 }
 
 
