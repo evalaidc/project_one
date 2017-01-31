@@ -18,77 +18,71 @@ function beginGame() {
 	solutionArray = solution.split("");
 
 	for (i in solutionArray) {
-		$("#solution").append('<div class="letterHidden" id=' + [i] + '> '+  solutionArray[i] +'</div>').innerHTML =  solutionArray[i];
+		$("#solution").append('<div class="letterHidden" "class='+  solutionArray[i] +'> '+  solutionArray[i] +'</div>').innerHTML =  solutionArray[i];
 	}
-
-	// var count = solutionArray.reduce(function(values, v) {
- //  		if (!values.set[v]) {
- //    		values.set[v] = 1;
- //    		values.count++;
- //  		}
- //  		return values;
-	// 	}, { set: {}, count: 0 }).count;
-
 }
 
 alphaButton.on("click", guess);
 alphaButton.on("click", print);
 
-// function print() {
-// 	console.log(this.innerHTML);
-// }
 
 //Get the inner HTML of the button clicked and compare it to items in the solutionArray//
 function guess() {
 	guessLetter = (this.innerHTML)
 	$(this).hide();
+	var $this = $(this);
 	console.log (guessLetter);
-	if (solutionArray.indexOf(guessLetter)!= -1) {
 
-		for (var i = 0; i < solution.length; i ++) {
-			console.log('success');
-			break;
-		}
+	// solutionArray.forEach(function(letter) {
+	console.log($this)
 
-	// for (i in solutionArray) {
-	// 	if (guessLetter = solutionArray[i]) {
-	// 		return [i]
-			// console.log([i])
-			// $('div[id =' + [i] +']').attr('class', 'letterReveal');
-		}
+if ($.inArray(guessLetter, solutionArray) != -1) {
 
-		else { 
-			
-			wrongGuess ++;
-			console.log('wrong');
+			console.log('success')
+			console.log(guessLetter)
+			// document.querySelectorAll(div# + guessLetter).css('class', 'letterReveal');
+			$('.' + guessLetter).css('color', 'rgba(0,0,0,1)');
+			}
 
-				if (wrongGuess == 1) {
-					$('#hangman').attr('src', "img/hangmanparts/hangmanhead01.png");
-				}
+			else { 
+				
+				wrongGuess ++;
+				console.log(guessLetter);
+				console.log('wrong');
 
-				else if (wrongGuess == 2) {
-					$('#hangman').attr('src', "img/hangmanparts/hangmanbody02.png");
-				}
+					if (wrongGuess == 1) {
+						$('#hangman').attr('src', "img/hangmanparts/hangmanhead01.png");
+					}
 
-				else if (wrongGuess == 3) {
-					$('#hangman').attr('src', "img/hangmanparts/hangmanleftarm03.png");
-				}
+					else if (wrongGuess == 2) {
+						$('#hangman').attr('src', "img/hangmanparts/hangmanbody02.png");
+					}
 
-				else if (wrongGuess == 4) {
-					$('#hangman').attr('src', "img/hangmanparts/hangmanrightarm04.png");
-				}
+					else if (wrongGuess == 3) {
+						$('#hangman').attr('src', "img/hangmanparts/hangmanleftarm03.png");
+					}
 
-				else if (wrongGuess == 5) {
-					$('#hangman').attr('src', "img/hangmanparts/hangmanleftleg05.png");
-				}
+					else if (wrongGuess == 4) {
+						$('#hangman').attr('src', "img/hangmanparts/hangmanrightarm04.png");
+					}
 
-				else if (wrongGuess == 6) {
-					$('#hangman').attr('src', "img/hangmanparts/hangmanrightleg06.png");
-					alert("I'm sorry. You did not guess correctly. GAME OVER");
-				}
-	
-		}
-}
+					else if (wrongGuess == 5) {
+						$('#hangman').attr('src', "img/hangmanparts/hangmanleftleg05.png");
+					}
+
+					else if (wrongGuess == 6) {
+						$('#hangman').attr('src', "img/hangmanparts/hangmanrightleg06.png");
+					}
+
+					else if (wrongGuess == 6) {
+						alert("I'm sorry. You did not guess correctly. GAME OVER");
+					}
+		
+			}
+	}
+
+
+
 
 
 
