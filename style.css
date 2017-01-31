@@ -27,19 +27,40 @@ header {
 main {
 /*	max-height: 600px;*/
 /*	width: 650px;*/
-	flex-grow: 1;
+	/*flex-grow: 1;*/
 	border: 10px solid beige;
 	align-content: left;
+	min-width: 70%;
+	height: 100%;
 }
 
 aside {
-	order: 1;
+/*	order: 1;*/
 	object-position: center;
-	max-width: 20%;
+	max-width: 30%;
+	max-width: 100%
 	margin: 0 auto;
 }
 
-.letterhidden {
+footer {
+	display: block;
+	height: 15px;
+	background-image: url("img/board-19208_1920.jpg");
+	background-size: cover;
+}
+
+.letterHidden {
+	display: inline-block;
+	margin: 10px;
+	height: 50px;
+	max-width: 100px;
+	min-width: 30px;
+	border-bottom: 3px solid black;
+	flex-wrap: nowrap;
+
+}
+
+.letterReveal {
 	display: inline-block;
 	margin: 10px;
 	height: 50px;
@@ -79,18 +100,12 @@ aside {
 
 #solution {
 	/*justify-content: flex-end;*/
-	fl
 	display: block;
 	height: 100px;
 	background: lightgrey;
 	text-align: left;
-	object-position: top;
+	bottom: 0;
 	margin: 0 auto;
-}
-
-#startBox {
-	width: 200px;
-	height: 150px;
 }
 
 .playButton {
