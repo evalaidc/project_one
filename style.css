@@ -55,7 +55,7 @@ footer {
 	height: 50px;
 	max-width: 100px;
 	min-width: 30px;
-	color: rgba(0, 0, 0, 1);
+	color: rgba(0, 0, 0, 0);
 	border-bottom: 3px solid black;
 	flex-wrap: nowrap;
 
