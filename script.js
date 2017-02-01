@@ -60,26 +60,32 @@ function guess() {
 
 					if (wrongGuess == 1) {
 						$('#hangman').attr('src', "img/hangmanparts/hangmanhead01.png");
+						$('#hangman').attr('alt', "Gallows with hangman head");
 					}
 
 					else if (wrongGuess == 2) {
 						$('#hangman').attr('src', "img/hangmanparts/hangmanbody02.png");
+						$('#hangman').attr('alt', "Gallows with hangman head and torso");
 					}
 
 					else if (wrongGuess == 3) {
 						$('#hangman').attr('src', "img/hangmanparts/hangmanleftarm03.png");
+						$('#hangman').attr('alt', "Gallows with hangman head, torso and one arm");
 					}
 
 					else if (wrongGuess == 4) {
 						$('#hangman').attr('src', "img/hangmanparts/hangmanrightarm04.png");
+						$('#hangman').attr('alt', "Gallows with hangman head, torso and both arms");
 					}
 
 					else if (wrongGuess == 5) {
 						$('#hangman').attr('src', "img/hangmanparts/hangmanleftleg05.png");
+						$('#hangman').attr('alt', "Gallows with hangman head, torso, both arms and one leg");
 					}
 
 					else if (wrongGuess == 6) {
 						$('#hangman').attr('src', "img/hangmanparts/hangmanrightleg06.png");
+						$('#hangman').attr('alt', "Gallows with full hangman");
 						if (wrongGuess == 6) {
 						alert("Sorry. You have been hung. GAME OVER");
 					}

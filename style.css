@@ -8,7 +8,7 @@ body {
 @font-face {
 	font-family: riogrande;
 	src: url("fonts/rio_grande/riogrande.ttf");
-	font-weight: 
+	font-weight: lighter;
 }
 
 header {
@@ -19,7 +19,6 @@ header {
 	display: flex;
 	flex: 0 1 auto;
 	flex-direction: row;
-	flex-wrap: ltr;
 	margin: 0 auto;
 	/*max-height: 90%;*/
 }
@@ -38,7 +37,6 @@ aside {
 /*	order: 1;*/
 	object-position: center;
 	max-width: 30%;
-	max-width: 100%
 	margin: 0 auto;
 }
 
@@ -82,8 +80,6 @@ footer {
 	border: 3px solid white;
 	border-radius: 40%;
 	text-align: center;
-
-
 }
 
 #head {
@@ -113,9 +109,7 @@ footer {
 	width: 250px;
 	height: 150px;
 	border: 3px solid black;
-
 }
 
-¬
 
 
