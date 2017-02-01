@@ -1,0 +1,143 @@
+body {
+	background-size: cover;
+	background-image: url("img/1814ThompsonMap.jpg");
+	margin: 0 auto;
+
+}
+
+@font-face {
+	font-family: riogrande;
+	src: url("fonts/rio_grande/riogrande.ttf");
+	font-weight: lighter;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+}
+
+.flexcontainer {
+	display: flex;
+	flex: 0 1 auto;
+	flex-direction: row;
+	margin: 0 auto;
+	/*max-height: 90%;*/
+}
+
+main {
+/*	max-height: 600px;*/
+/*	width: 650px;*/
+	/*flex-grow: 1;*/
+	border: 10px solid beige;
+	align-content: left;
+	min-width: 70%;
+	height: 100%;
+}
+
+aside {
+/*	order: 1;*/
+	object-position: center;
+	max-width: 30%;
+	margin: 0 auto;
+}
+
+footer {
+	display: block;
+	height: 20px;
+	background-image: url("img/board-19208_1920.jpg");
+	background-size: cover;
+}
+
+.letterHidden {
+	display: inline-block;
+	font-family: riogrande;
+	font-size: 50px;
+	color: white;
+	text-align: center;
+	margin: 10px;
+	height: 50px;
+	max-width: 100px;
+	min-width: 30px;
+	color: rgba(0, 0, 0, 0);
+	border-bottom: 3px solid black;
+	flex-wrap: nowrap;
+}
+
+.letterReveal {
+	display: inline-block;
+	font-family: riogrande;
+	font-size: 30px;
+	color: white;
+	text-align: center;
+	margin: 10px;
+	height: 50px;
+	max-width: 100px;
+	min-width: 30px;
+	color: rgba(0, 0, 0, 1);
+	border-bottom: 3px solid black;
+	flex-wrap: nowrap;
+}
+
+.alphaButton {
+	height: 50px;
+	width: 50px;
+	min-width: 15px;
+	background: BurlyWood;
+	color: white;
+	font-size: 2em;
+	margin: 10px;
+	border: 3px solid white;
+	border-radius: 40%;
+	text-align: center;
+}
+
+#head {
+	display: ;
+	font-family: riogrande;
+	background-color: beige;
+	color: white;
+	height: 75px;
+	width: 80%;
+	font-size: 60px;
+	background-image: url("img/board-19208_1920.jpg");
+	background-size: cover;
+	text-align: center;
+	vertical-align: center;
+	padding: 20px 0px 20px 0px;
+}
+
+#solution {
+	/*justify-content: flex-end;*/
+	display: block;
+	height: 100px;
+	background: burlywood;
+	text-align: center;
+	bottom: 0;
+	border: 3px solid darkgoldenrod;
+	margin: 0 auto;
+	color: white;
+}
+
+#startBox {
+	
+	background-color: white;
+	font-size: 50px
+	color: white;
+	display: block;
+	flex: right;
+	width: 20%;
+	height: 75px;
+}
+
+.playButton {
+	font-family: riogrande;
+	font-size: 50px;
+	background-color: beige;
+	color: black;
+	width: 100%;
+	height: 115px;
+	border: 3px solid black;
+}
+
+
+
