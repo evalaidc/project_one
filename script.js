@@ -8,6 +8,7 @@ var solutionArray;
 wrongGuess = 0;
 correctGuess = 0;
 
+// // declared variable twice?
 var alphaButton = $(".alphaButton");
 
 playButton.on("click", beginGame);
@@ -24,6 +25,7 @@ function beginGame() {
 alphaButton.on("click", function() {
 	guessLetter = (this.innerHTML);
 	$(this).hide();
+	// // extra code -- not used
 	var $this = $(this);
 	guess();
 });
@@ -34,7 +36,7 @@ function guess() {
 	console.log(solutionArray);
 	console.log("guessLetter: ", guessLetter);
 	// Check if selected letter exists in the array
-	if (solutionArray.indexOf(guessLetter)!= -1) { 
+	if (solutionArray.indexOf(guessLetter)!= -1) {
 			// Count and compare the number of correct guesses against the lenght of the solution. Still doesn't account for double letters.
 			correctGuess ++;
 			if (correctGuess == solutionArray.length){
@@ -58,6 +60,8 @@ function guess() {
 				console.log(guessLetter);
 				console.log('wrong');
 
+// // this website helps with condensing and adding mutliple attr to help shorten it a little bit more.
+// //  http://stackoverflow.com/questions/16422675/is-it-possible-to-set-multiple-data-attributes-using-the-jquery-attr-function
 					if (wrongGuess == 1) {
 						$('#hangman').attr('src', "img/hangmanparts/hangmanhead01.png");
 						$('#hangman').attr('alt', "Gallows with hangman head");
@@ -93,6 +97,16 @@ function guess() {
 			}
 }
 
-
-
-
+// // for the possibility of using an object and a for loop
+// hangman = {
+// 	one:$('#hangman').attr({
+//
+// 	}),
+// 	two:$('#hangman').attr({
+// 		img/attr
+// 	})
+// }
+//
+// for (var i=0; i< 5;i++) {
+// 	array img/alt
+// }
